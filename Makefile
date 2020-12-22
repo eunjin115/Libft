@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/22 17:58:47 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/22 18:40:05 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,10 @@ SOURCES =	ft_strlen.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
 			ft_strchr.c \
+			ft_strrchr.c \
+			ft_strncmp.c\
+			
+
 			
 OBJECTS = $(SOURCES:.c=.o)
 INCDIR = .

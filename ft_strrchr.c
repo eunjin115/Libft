@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 16:48:06 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/22 23:08:29 by eunjikim         ###   ########.fr       */
+/*   Created: 2020/12/22 18:07:26 by eunjikim          #+#    #+#             */
+/*   Updated: 2020/12/22 18:39:21 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strncmp(const char *s1, const char *s2, size_t n)
+char * ft_strrchr(const char *str, int c)
 {
-	while (*s1 != '\0' && *s2 != '\0' && n)
+	const char	*tmp;
+	int			i;
+
+	if (c == 0)
+		return ((char *)&str[ft_strlen(str)]);
+	tmp = 0;
+	i = 0;
+	while (str[i] != 0)
 	{
-		if (*s1 != *s2)
-			return (*(unsigned char*)s1 - *(unsigned char*)s2);
-		n--;
-		s1++;
-		s2++;
+		if (str[i] == c)
+			tmp = &str[i];
+		i++;
 	}
-	if (n == 0)
-		return (0);
-	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	return ((char *)tmp);
 }
