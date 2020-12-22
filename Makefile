@@ -6,12 +6,12 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/22 17:46:44 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/22 17:58:47 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 TARGET = libft.a
-SOURCES = ft_strlen.c \
+SOURCES =	ft_strlen.c \
 			ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -23,9 +23,7 @@ SOURCES = ft_strlen.c \
 			ft_toupper.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
-			
-			
-			
+			ft_strchr.c \
 			
 OBJECTS = $(SOURCES:.c=.o)
 INCDIR = .
