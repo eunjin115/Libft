@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 16:58:35 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 00:57:26 by eunjikim         ###   ########.fr       */
+/*   Created: 2020/12/23 00:45:38 by eunjikim          #+#    #+#             */
+/*   Updated: 2020/12/23 01:10:19 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strdup(const char *s1)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int i;
-	unsigned int len;
-	char *result;
+	size_t i;
 
-	len = ft_strlen(s1);
-	if (!(result = ft_calloc(len + 1, sizeof(char))))
-		return (NULL);
+	if (n == 0)
+		return;
 	i = 0;
-	while (i < len)
-	{
-		result[i] = s1[i];
-		i++;
-	}
-	result[i] = 0;
-	return (result);
+	while (i++ < n)
+		*(unsigned char *)s++ = 0;
 }
