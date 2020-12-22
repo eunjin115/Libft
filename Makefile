@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/22 13:47:58 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/22 16:16:07 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ SOURCES = ft_strlen.c \
 			ft_strdup.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			ft_strlcpy.c \
+			
 			
 			
 			

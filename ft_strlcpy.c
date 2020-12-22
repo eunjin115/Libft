@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 14:37:37 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/22 16:53:29 by eunjikim         ###   ########.fr       */
+/*   Created: 2020/12/22 16:15:55 by eunjikim          #+#    #+#             */
+/*   Updated: 2020/12/22 17:12:52 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
+size_t					ft_strlcpy(char * dst, const char * src, size_t size)
+{
+	size_t		index;
+	size_t		src_len;
 
-size_t	ft_strlen(const char *str);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
-int		ft_atoi(const char *str);
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t size);
-
-#endif
+	if (dst == 0 || src == 0)
+		return (0);
+	index = 0;
+	src_len = 0;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (size != 0)
+	{
+		while (src[index] != '\0' && index < size - 1)
+		{
+			dst[index] = src[index];
+			index++;
+		}
+		dst[index] = '\0';
+	}
+	return (src_len);
+}
