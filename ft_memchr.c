@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 23:32:18 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 09:57:26 by eunjikim         ###   ########.fr       */
+/*   Created: 2020/12/23 01:16:05 by eunjikim          #+#    #+#             */
+/*   Updated: 2020/12/23 02:08:26 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *	ft_strnstr(const char *haystack, const char *needle, size_t len)
+void *	ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	unsigned char *	tmp;
+	size_t			i;
 
-	if (*needle == '\0' || len == 0)
-		return ((char *)haystack);
+	tmp = (unsigned char *)s;
 	i = 0;
-	while (i < len && haystack[i] != '\0')
+	while (i < n)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && i + j < len)
-		{
-			j++;
-			if(needle[j] == '\0')
-				return ((char *)&haystack[i]);
-		}
+		if (tmp[i] == (unsigned char)c)
+			return (&tmp[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

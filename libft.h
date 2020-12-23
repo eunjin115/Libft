@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 14:37:37 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 01:07:44 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/23 02:14:40 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,11 @@ void *	ft_memset(void *b, int c, size_t len);
 void *	ft_calloc(size_t count, size_t size);
 char * ft_strdup(const char *s1);
 void	ft_bzero(void *s, size_t n);
+void *	ft_memcpy(void *dst, const void *src, size_t n);
+void *	ft_memccpy(void *dst, const void *src, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void *	ft_memchr(const void *s, int c, size_t n);
+void *	ft_memmove(void *dst, const void *src, size_t len);
+char *	ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif

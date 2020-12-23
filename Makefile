@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/23 00:49:33 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/23 02:35:37 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,15 @@ SOURCES =	ft_strlen.c \
 			ft_calloc.c\
 			ft_strdup.c\
 			ft_bzero.c\
+			ft_strnstr.c\
+			ft_memcpy.c\
+			ft_memccpy.c\
+			ft_memchr.c\
+			ft_memcmp.c\
+			ft_memmove.c\
+			ft_strnstr.c\
+			
+			
 			
 			
 			
