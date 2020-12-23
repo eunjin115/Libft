@@ -3,8 +3,9 @@
 #include <string.h>
 int main()
 {
-    char *s1 = "\x12\xff\x65\x12\xbd\xde\xad";
-	char *s2 = "\x12\x02";
-    printf("%d \n", strncmp(s1, s2,6));
-    int i1 = ((strncmp(s1, s2, 6) > 0) ? 1 : ((strncmp(s1, s2, 6) < 0) ? -1 : 0));
+    //char str[100] = "abcdefghij";
+    int str[10] = {1,2,3,4,5,6,7,8,9};
+    int *a = (int *)memmove(str+3, str+0, 4 * 4);
+    for(int i = 0; i<6; i++)
+        printf("%d \n", a[i]);
 }
