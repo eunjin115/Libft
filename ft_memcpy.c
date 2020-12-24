@@ -6,13 +6,13 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 01:15:01 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 01:25:47 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/23 15:27:16 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *	ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 

@@ -6,13 +6,13 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 18:07:26 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/22 18:39:21 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/23 15:26:41 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	const char	*tmp;
 	int			i;

@@ -6,13 +6,13 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:48:20 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 00:42:52 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/23 15:26:52 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *	ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void * result;
 
