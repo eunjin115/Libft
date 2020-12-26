@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/24 23:00:22 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/24 23:04:31 by eunjikim         ###   ########.fr       */
+/*   Created: 2020/12/26 14:00:00 by eunjikim          #+#    #+#             */
+/*   Updated: 2020/12/26 14:06:25 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strndup(char *str, int n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char *result;
-	result = (char *)malloc(sizeof(char) * n +1);
-	int i = 0;
-	while(i<n)
-	{
-		result[i] = str[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
+	if (s == 0)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

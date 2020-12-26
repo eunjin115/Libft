@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:35 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/24 22:57:02 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/26 15:26:27 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_abs(int n)
 	return (n);
 }
 
-int		ft_len(int n)
+int		ft_find_len(int n)
 {
 	int len;
 
@@ -40,7 +40,7 @@ char			*ft_itoa(int n)
 	char		*str;
 	int		len;
 
-	len = ft_len(n);
+	len = ft_find_len(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len] = '\0';

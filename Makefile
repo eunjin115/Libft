@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/24 23:04:15 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/26 15:04:21 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,17 +40,15 @@ SOURCES =	ft_strlen.c \
 			ft_substr.c\
 			ft_strjoin.c\
 			ft_strtrim.c \
-			ft_split.c\
 			ft_itoa.c\
-			ft_strndup.c\
+			ft_putchar_fd.c\
+			ft_putstr_fd.c\
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_strmapi.c \
+			#ft_split.c\
 			
 			
-			
-			
-			
-			
-			
-
 			
 OBJECTS = $(SOURCES:.c=.o)
 INCDIR = .
@@ -73,4 +71,6 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re .c.o
+#bonus : 
+
+.PHONY: all clean fclean re bonus .c.o

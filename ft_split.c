@@ -6,18 +6,43 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:30 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/24 23:04:55 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/26 13:58:30 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int is_char_set(char str, char c)
+char *ft_strndup(const char *str, int n)
 {
-	return (str == c);
+	char *result;
+	result = (char *)malloc(sizeof(char) * n + 1);
+	int i = 0;
+	while(i < n)
+	{
+		result[i] = str[i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
-char **ft_split(char *str, char c)
+size_t get_count_words(char const *str, char c)
+{
+	size_t	i;
+	size_t	cnt;
+
+	i = 0;
+	cnt = 0;
+	while (str[i] != 0)
+	{
+		if(str[i] != c && (str[i + 1] == c || str[i + 1] == 0))
+			cnt++;
+		i++;
+	}
+	return (cnt);
+}
+
+char	**ft_split(char const *str, char c)
 {
 	int i;
 	int n;
@@ -25,15 +50,11 @@ char **ft_split(char *str, char c)
 	int index;
 	char **result;
 
-	if (str == 0 || c == 0)
+	if (str == 0)
 		return (NULL);
-	n = 1;
 	i = 0;
-	while (str[i] != '\0')
-		if (str[i++] == c)
-			n++;
+	n = get_count_words(str, c);
 	result = (char **)malloc(sizeof(char *) * (n + 1));
-	i = 0;
 	start = 0;
 	index = 0;
 	while (str[i] != '\0')
@@ -46,6 +67,6 @@ char **ft_split(char *str, char c)
 			result[index++] = ft_strndup(str + start, i - start +1);
 		i++;
 	}
-	result[index] = 0;
+	result[index] = NULL;
 	return (result);
 }
