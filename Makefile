@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/26 18:08:43 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/27 00:45:30 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,9 @@ SRCS	=	ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c 
 			
-SRCS_B	= ft_lstnew.c 
+SRCS_B	= ft_lstnew.c \
+			ft_lstadd_front.c\
+			
 OBJS	= $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)
 RM		= rm -f
