@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 14:00:10 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/26 15:17:10 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/26 17:53:32 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	if (s == 0)
 		return ;
-	//write(fd, s, ft_strlen(s));
-	ft_putstr_fd(s, fd);
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
