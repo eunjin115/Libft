@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 14:37:37 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/26 18:07:47 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/27 10:38:55 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 typedef struct s_list
 {
-void			*content;
-struct s_list	*next;
+	void			*content;
+	struct s_list	*next;
 }				t_list;
 
 t_list	*ft_lstnew(void *content);
