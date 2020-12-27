@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:30 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/27 10:50:29 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/27 10:56:59 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ size_t	get_words_len(char const *s, char c)
 	return (len);
 }
 
-void	*mem_free(char **result, size_t count)
+void	mem_free(char **result, size_t count)
 {
 	size_t	i;
 
@@ -52,18 +52,15 @@ void	*mem_free(char **result, size_t count)
 		while (i < count)
 			free(result[i++]);
 	free(result);
-	return (NULL);
 }
 
 char	**make_split(char const *s, size_t words, char c, char **result)
 {
 	size_t	i;
 	size_t	j;
-	size_t	k;
 	size_t	len;
 
 	i = 0;
-	k = 0;
 	while (i < words)
 	{
 		j = 0;
@@ -71,7 +68,10 @@ char	**make_split(char const *s, size_t words, char c, char **result)
 			s++;
 		len = get_words_len(s, c);
 		if (!(result[i] = (char *)malloc(sizeof(char) * (len + 1))))
-			return (mem_free(result, i));
+		{
+			mem_free(result, i);
+			return (NULL);
+		}
 		while (j < len)
 		{
 			result[i][j] = *s++;
