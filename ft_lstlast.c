@@ -6,13 +6,13 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 11:16:27 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/27 23:35:34 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:00:03 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);

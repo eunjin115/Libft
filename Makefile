@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/29 12:27:42 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/29 12:44:11 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,11 +58,11 @@ OBJS	= $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)
 RM		= rm -f
 LIBC	= ar -rcs
-FLAGS	= -Wall -Wextra -Werror
+FLAGS	= -Wall -Wextra -Werror -I .
 INCS	= .
 
 .c.o :
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o} -I${INCS}
+	${CC} ${FLAGS} -c $< -o ${<:.c=.o} 
 
 $(NAME): ${OBJS}
 	${LIBC} $(NAME) $(OBJS)
@@ -71,7 +71,7 @@ all: $(NAME)
 
 bonus: $(NAME) $(OBJS_B)
 	${LIBC} $(NAME) $(OBJS_B)
-    
+
 fclean: clean
 	$(RM) $(NAME) $(bonus)
 

@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:11 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 15:37:30 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:09:54 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = start;
 	while (i < length)
 	{
-		result[i - start] =  s[i];
+		result[i - start] = s[i];
 		i++;
 	}
 	result[i - start] = '\0';

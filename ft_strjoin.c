@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:19 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 15:57:35 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:02:51 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	if (!(result = (char *)malloc(sizeof(char) * (s1_len + 
+	if (!(result = (char *)malloc(sizeof(char) * (s1_len +
 										s2_len + 1))))
 		return (NULL);
 	ft_memcpy(result, s1, s1_len);

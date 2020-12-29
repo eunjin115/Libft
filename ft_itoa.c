@@ -6,22 +6,22 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:35 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/26 15:26:27 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:24:34 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_abs(int n)
+int				ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-int		ft_find_len(int n)
+int				ft_find_len(int n)
 {
-	int len;
+	int			len;
 
 	if (n <= 0)
 		len = 1;
@@ -38,7 +38,7 @@ int		ft_find_len(int n)
 char			*ft_itoa(int n)
 {
 	char		*str;
-	int		len;
+	int			len;
 
 	len = ft_find_len(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))

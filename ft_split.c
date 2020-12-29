@@ -6,16 +6,16 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 14:10:30 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/27 10:56:59 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:24:11 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(const char *str, char c)
+size_t			count_words(const char *str, char c)
 {
-	size_t	i;
-	size_t	words;
+	size_t		i;
+	size_t		words;
 
 	i = 0;
 	words = 0;
@@ -28,10 +28,10 @@ size_t	count_words(const char *str, char c)
 	return (words);
 }
 
-size_t	get_words_len(char const *s, char c)
+size_t			get_words_len(char const *s, char c)
 {
-	size_t			i;
-	size_t			len;
+	size_t		i;
+	size_t		len;
 
 	i = 0;
 	len = 0;
@@ -43,9 +43,9 @@ size_t	get_words_len(char const *s, char c)
 	return (len);
 }
 
-void	mem_free(char **result, size_t count)
+void			mem_free(char **result, size_t count)
 {
-	size_t	i;
+	size_t		i;
 
 	i = 0;
 	if (count > 0)
@@ -54,11 +54,11 @@ void	mem_free(char **result, size_t count)
 	free(result);
 }
 
-char	**make_split(char const *s, size_t words, char c, char **result)
+char			**make_split(char const *s, size_t words, char c, char **result)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	size_t		i;
+	size_t		j;
+	size_t		len;
 
 	i = 0;
 	while (i < words)
@@ -83,9 +83,9 @@ char	**make_split(char const *s, size_t words, char c, char **result)
 	return (result);
 }
 
-char		**ft_split(char const *str, char c)
+char			**ft_split(char const *str, char c)
 {
-	char	**result;
+	char		**result;
 	size_t		words;
 
 	if (str == 0)

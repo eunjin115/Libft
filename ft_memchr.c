@@ -6,15 +6,15 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/23 01:16:05 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 15:27:09 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:07:42 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void				*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *	tmp;
+	unsigned char	*tmp;
 	size_t			i;
 
 	tmp = (unsigned char *)s;

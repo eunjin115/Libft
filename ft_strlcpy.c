@@ -6,13 +6,13 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:15:55 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/22 17:34:06 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 14:58:29 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t					ft_strlcpy(char * dst, const char * src, size_t size)
+size_t			ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t		index;
 	size_t		src_len;

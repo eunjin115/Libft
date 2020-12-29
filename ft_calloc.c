@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:48:20 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/23 15:26:52 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 15:18:21 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void * result;
+	void	*result;
 
-	if(!(result = malloc(size * count)))
+	if (!(result = malloc(size * count)))
 		return (NULL);
 	ft_memset(result, 0, count * size);
 	return (result);

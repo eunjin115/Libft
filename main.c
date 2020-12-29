@@ -1,10 +1,8 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
+#include <stdio.h>
 
 int main()
 {
-    char str[100] = "abcdefghij";
-    printf("%s \n", ft_substr(str, 2, 3));
+	char a[] = "Abcdasdf ssdfs";
+	printf("%s \n", ft_strtrim(a,0));
 }
