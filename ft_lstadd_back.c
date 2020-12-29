@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 11:21:35 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/27 11:33:10 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/27 23:27:25 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	if (!lst || new)
+	if (!lst || !new)
 		return ;
 	ptr = *lst;
 	ptr = ft_lstlast(ptr);

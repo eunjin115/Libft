@@ -6,7 +6,7 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 11:16:27 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/27 11:18:38 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/27 23:35:34 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 t_list *ft_lstlast(t_list *lst)
 {
-
-	while (lst && lst->next)
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
 	}
