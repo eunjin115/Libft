@@ -6,7 +6,7 @@
 #    By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/21 14:37:42 by eunjikim          #+#    #+#              #
-#    Updated: 2020/12/27 11:24:47 by eunjikim         ###   ########.fr        #
+#    Updated: 2020/12/29 12:27:42 by eunjikim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,16 +45,15 @@ SRCS	=	ft_atoi.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c 
-			
-SRCS_B	= ft_lstnew.c \
-			ft_lstadd_front.c\
-			ft_lstsize.c \
+SRCS_B	=   ft_lstadd_back.c \
+			ft_lstadd_front.c \
+			ft_lstclear.c \
+			ft_lstdelone.c \
+			ft_lstiter.c \
 			ft_lstlast.c \
-			ft_lstadd_back.c\
-			
-			
-			
-			
+			ft_lstmap.c \
+			ft_lstnew.c \
+			ft_lstsize.c
 OBJS	= $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)
 RM		= rm -f
@@ -78,7 +77,7 @@ fclean: clean
 
 clean:
 	$(RM) -f $(OBJS) $(OBJS_B)
-    
+
 re: fclean all
 
 .PHONY: all bonus clean fclean re .c.o

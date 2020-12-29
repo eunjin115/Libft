@@ -6,55 +6,42 @@
 /*   By: eunjikim <eunjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 16:58:08 by eunjikim          #+#    #+#             */
-/*   Updated: 2020/12/22 13:57:39 by eunjikim         ###   ########.fr       */
+/*   Updated: 2020/12/29 12:26:04 by eunjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_check_space(char c)
+static	int		ft_isspace(char c)
 {
-	char	*space;
-	int		i;
-
-	space = "\t\n\v\f\r ";
-	i = 0;
-	while (space[i] != '\0')
-	{
-		if (c == space[i])
-			return (1);
-		i++;
-	}
+	if (c == ' ' || (c >= 9 && c <= 13))
+		return (1);
 	return (0);
 }
 
-int			ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
-	long int		result;
-	int		minus;
+	long long	res;
+	long long	sign;
 
-	result = 0;
-	minus = 1;
-	while (ft_check_space(*str))
+	res = 0;
+	sign = 1;
+	while (ft_isspace(*str))
 		str++;
-	if (*str == '+' || *str == '-')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-		{
-			minus *= -1;
-		}
+			sign = -1;
 		str++;
 	}
-	while (ft_isdigit(*str))
+	while (*str >= '0' && *str <= '9')
 	{
-		result *= 10;
-		result += *str - '0';
-		if (result > 2147483647 && minus == 1)
+		if (res > 2147483647 && sign == 1)
 			return (-1);
-		if (result > 2147483648 && minus == -1)
+		if (res > 2147483648 && sign == -1)
 			return (0);
+		res = res * 10 + (*str - '0');
 		str++;
 	}
-
-	return (result * minus);
+	return (sign * res);
 }
