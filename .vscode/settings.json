@@ -1,6 +1,8 @@
 {
 	"files.associations": {
 		"cstring": "cpp",
-		"chrono": "c"
+		"chrono": "c",
+		"string": "c",
+		"string_view": "c"
 	}
 }
